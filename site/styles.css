@@ -943,3 +943,53 @@ hr.divider {
   .stat-num { font-size: 2rem; }
   .project-card-top { flex-direction: column; }
 }
+
+/* ── Mobile (≤ 480px) ────────────────────────────────────── */
+@media (max-width: 480px) {
+  /* Nav: smaller font so 4 links fit in 2 rows max */
+  .nav { gap: 0.35rem 0.75rem; }
+  .nav-link { font-size: 0.78rem; }
+  .lang-btn { padding: 0.28rem 0.55rem; font-size: 0.72rem; }
+
+  /* Hero: hide decorative watermark, reduce padding */
+  .hero-watermark { display: none; }
+  .hero { padding-top: 2.5rem; padding-bottom: 2rem; }
+  .hero-title { font-size: 2rem; letter-spacing: -0.025em; }
+  .hero-sub { font-size: 1rem; }
+  .hero-lead { font-size: 0.95rem; }
+  .stat-num { font-size: 1.85rem; }
+  .hero-actions { gap: 0.6rem; }
+  .hero-actions .btn { font-size: 0.85rem; padding: 0.55rem 1.1rem; }
+
+  /* Sections: tighter padding */
+  .section { padding-left: 1rem; padding-right: 1rem; }
+  .section-title { font-size: 1.45rem; }
+
+  /* Cards: full-width padding */
+  .project-card { padding: 1.25rem 1rem; }
+  .service-card { padding: 1.1rem 1rem; }
+  .step-item { padding: 0.85rem 1rem; }
+
+  /* SVG diagrams: hint to scroll */
+  .diagram-wrap { position: relative; }
+  .diagram-wrap::after {
+    content: '← desliza →';
+    display: block;
+    text-align: center;
+    font-size: 0.68rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    font-family: var(--mono);
+  }
+
+  /* AI CTA: reduce padding */
+  .ai-cta-inner { padding: 1.5rem 1.25rem; }
+  .ai-cta-title { font-size: 1.1rem; }
+
+  /* Timeline: tighter */
+  .timeline { padding-left: 1.1rem; }
+  .job { padding: 0.9rem 1rem; }
+
+  /* Callout */
+  .callout { padding: 1rem 1.1rem; }
+}
