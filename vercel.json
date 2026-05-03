@@ -1,0 +1,8 @@
+{
+  "buildCommand": "",
+  "outputDirectory": "site",
+  "installCommand": "",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false
+}

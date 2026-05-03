@@ -1,0 +1,20 @@
+# Documentos de trabajo (no van al repo público)
+*.docx
+*.doc
+*.pdf
+update_word_cvs.py
+
+# PDFs generados (el CV lo subes tú manualmente a site/cv/)
+site/cv/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.code-workspace
+
+# Node (si usas en el futuro)
+node_modules/
+.env

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Federico Arango — Arquitecto de automatización. Convierto procesos manuales en sistemas inteligentes para negocios." />
+  <title>Federico Arango · Automatización & Datos</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="lang-es" data-page="home">
+
+<!-- ══ NAV ═══════════════════════════════════════════════ -->
+<header class="top">
+  <!-- Logo SVG -->
+  <a class="logo-link" href="index.html" aria-label="FA — Federico Arango">
+    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+      <defs>
+        <linearGradient id="logo-grad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#00d4ff"/>
+          <stop offset="100%" stop-color="#a855f7"/>
+        </linearGradient>
+        <filter id="logo-glow">
+          <feGaussianBlur stdDeviation="1.5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- Hexagon -->
+      <polygon points="22,2 40,12 40,32 22,42 4,32 4,12"
+        fill="rgba(0,212,255,0.1)" stroke="url(#logo-grad)" stroke-width="1.5"/>
+      <!-- FA text -->
+      <text x="22" y="28" text-anchor="middle"
+        font-family="Audiowide,monospace" font-size="14" font-weight="700"
+        fill="#00d4ff" filter="url(#logo-glow)">FA</text>
+    </svg>
+  </a>
+
+  <nav class="nav" aria-label="Principal">
+    <a href="#servicios"    class="nav-link lang-es">Lo que hago</a>
+    <a href="#servicios"    class="nav-link lang-en">What I do</a>
+    <a href="#proyectos"    class="nav-link lang-es">Proyectos</a>
+    <a href="#proyectos"    class="nav-link lang-en">Projects</a>
+    <a href="#trayectoria"  class="nav-link lang-es">Trayectoria</a>
+    <a href="#trayectoria"  class="nav-link lang-en">Background</a>
+    <a href="contacto.html" class="nav-link lang-es">Contacto</a>
+    <a href="contacto.html" class="nav-link lang-en">Contact</a>
+  </nav>
+  <div class="lang-switch" role="group" aria-label="Idioma">
+    <button type="button" class="lang-btn is-active" data-lang="es">ES</button>
+    <button type="button" class="lang-btn" data-lang="en">EN</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section class="hero" aria-label="Presentación">
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+  <!-- Large decorative FA watermark -->
+  <div class="hero-watermark" aria-hidden="true">FA</div>
+
+  <p class="hero-badge lang-es">Ingeniero Industrial · Datos · Automatización con IA</p>
+  <p class="hero-badge lang-en">Industrial Engineer · Data · AI-powered Automation</p>
+
+  <h1 class="hero-title">Federico Arango</h1>
+
+  <p class="hero-sub lang-es">
+    Convierto procesos manuales en <span class="accent">sistemas que trabajan solos</span>
+  </p>
+  <p class="hero-sub lang-en">
+    I turn manual processes into <span class="accent">systems that run themselves</span>
+  </p>
+
+  <p class="hero-lead lang-es">
+    No siempre escribo cada línea de código —
+    <strong>identifico el problema, diseño el flujo y orquesto las herramientas</strong>
+    para que el resultado sea exactamente lo que el negocio necesita.
+  </p>
+  <p class="hero-lead lang-en">
+    I don't always write every line of code —
+    <strong>I identify the problem, design the flow, and orchestrate the tools</strong>
+    so the result is exactly what the business needs.
+  </p>
+
+  <div class="hero-stats" aria-label="Stats">
+    <div class="stat-item">
+      <span class="stat-num" data-count="5">0</span>
+      <span class="stat-label lang-es">años de experiencia</span>
+      <span class="stat-label lang-en">years of experience</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-count="30">0</span>
+      <span class="stat-label lang-es">empresas relacionadas</span>
+      <span class="stat-label lang-en">companies engaged</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-count="4">0</span>
+      <span class="stat-label lang-es">proyectos activos</span>
+      <span class="stat-label lang-en">active projects</span>
+    </div>
+  </div>
+
+  <div class="hero-actions">
+    <a class="btn btn-primary lang-es" href="#servicios">¿Cómo puedo ayudarte?</a>
+    <a class="btn btn-primary lang-en" href="#servicios">How can I help you?</a>
+    <a class="btn btn-ghost lang-es" href="#proyectos">Ver proyectos</a>
+    <a class="btn btn-ghost lang-en" href="#proyectos">See projects</a>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ══ SECCIÓN 1 — QUIÉN SOY + LO QUE HAGO ═════════════ -->
+<section id="servicios" class="section" aria-label="Lo que hago">
+
+  <p class="section-label lang-es">01 — Lo que hago</p>
+  <p class="section-label lang-en">01 — What I do</p>
+
+  <h2 class="section-title lang-es">
+    La mente que convierte<br><span class="accent">caos en automatización</span>
+  </h2>
+  <h2 class="section-title lang-en">
+    The mind that turns<br><span class="accent">chaos into automation</span>
+  </h2>
+
+  <!-- Identity callout -->
+  <div class="callout reveal" style="margin-bottom:2.5rem;max-width:700px">
+    <p class="callout-title lang-es">Quién soy</p>
+    <p class="callout-title lang-en">Who I am</p>
+    <p class="callout-body lang-es">
+      Ingeniero industrial con base en <strong>análisis de datos, gestión de procesos y operaciones</strong>.
+      Hoy diseño automatizaciones para PYMEs usando IA generativa, bots de mensajería y dashboards
+      ejecutivos. Mi valor está en entender el proceso de negocio primero — y en saber qué herramienta
+      resolver cada pieza del flujo.
+    </p>
+    <p class="callout-body lang-en">
+      Industrial engineer grounded in <strong>data analysis, process management, and operations</strong>.
+      Today I design automations for SMBs using generative AI, messaging bots, and executive dashboards.
+      My value is in understanding the business process first — and knowing which tool solves each
+      piece of the flow.
+    </p>
+  </div>
+
+  <!-- Service cards -->
+  <div class="service-grid reveal" style="margin-bottom:2.5rem">
+    <article class="service-card">
+      <span class="service-icon">📥</span>
+      <h3 class="service-card-title lang-es">Captura automática de datos</h3>
+      <h3 class="service-card-title lang-en">Automatic data capture</h3>
+      <p class="service-card-body lang-es">
+        Correos, formularios o mensajes llegan solos a una hoja estructurada con reglas claras.
+        Sin copiar y pegar.
+      </p>
+      <p class="service-card-body lang-en">
+        Emails, forms, or chat messages flow automatically into a structured sheet with clear rules.
+        No copy-paste.
+      </p>
+    </article>
+
+    <article class="service-card">
+      <span class="service-icon">📊</span>
+      <h3 class="service-card-title lang-es">Dashboard ejecutivo</h3>
+      <h3 class="service-card-title lang-en">Executive dashboard</h3>
+      <p class="service-card-body lang-es">
+        KPIs en lenguaje claro — ventas, inventario y marketing en un solo lugar, sin abrir cinco
+        herramientas distintas.
+      </p>
+      <p class="service-card-body lang-en">
+        Plain-language KPIs — sales, inventory, and marketing in one place, without juggling five
+        different tools.
+      </p>
+    </article>
+
+    <article class="service-card">
+      <span class="service-icon">🤖</span>
+      <h3 class="service-card-title lang-es">Bots con trazabilidad</h3>
+      <h3 class="service-card-title lang-en">Traceable bots</h3>
+      <p class="service-card-body lang-es">
+        Telegram o WhatsApp para registrar operaciones con confirmación explícita; respaldo contable
+        automático. Ideal para equipos pequeños.
+      </p>
+      <p class="service-card-body lang-en">
+        Telegram or WhatsApp for operations with explicit confirmation; automatic accounting backup.
+        Great for small teams.
+      </p>
+    </article>
+
+    <article class="service-card">
+      <span class="service-icon">🛡️</span>
+      <h3 class="service-card-title lang-es">IA con límites sanos</h3>
+      <h3 class="service-card-title lang-en">AI with guardrails</h3>
+      <p class="service-card-body lang-es">
+        Cuando la IA procesa texto sensible, diseño umbrales y revisión humana para que nada se
+        guarde sin validar.
+      </p>
+      <p class="service-card-body lang-en">
+        When AI parses sensitive text, I design thresholds and human review so nothing saves
+        without validation.
+      </p>
+    </article>
+  </div>
+
+  <!-- Process steps -->
+  <div class="reveal" style="transition-delay:.1s;margin-bottom:2.5rem">
+    <h3 style="margin:0 0 1rem;font-size:.95rem;font-weight:700;color:var(--text-2);text-transform:uppercase;letter-spacing:.08em;font-family:var(--mono)" class="lang-es">Cómo trabajo</h3>
+    <h3 style="margin:0 0 1rem;font-size:.95rem;font-weight:700;color:var(--text-2);text-transform:uppercase;letter-spacing:.08em;font-family:var(--mono)" class="lang-en">How I work</h3>
+    <ol class="steps-list lang-es" style="max-width:600px">
+      <li class="step-item">
+        <span class="step-num">01</span>
+        <div class="step-content"><strong>Diagnóstico (60–90 min)</strong>Mapa del proceso y dolor principal. Identificamos exactamente dónde se pierden tiempo y datos.</div>
+      </li>
+      <li class="step-item">
+        <span class="step-num">02</span>
+        <div class="step-content"><strong>Propuesta corta</strong>Alcance, hitos y entregables. Sin letra pequeña.</div>
+      </li>
+      <li class="step-item">
+        <span class="step-num">03</span>
+        <div class="step-content"><strong>Implementación por hitos</strong>Demo intermedia en cada etapa para validar antes de continuar.</div>
+      </li>
+      <li class="step-item">
+        <span class="step-num">04</span>
+        <div class="step-content"><strong>Cierre + documentación</strong>Manual breve para que operes sin depender de mí cada día.</div>
+      </li>
+    </ol>
+    <ol class="steps-list lang-en" style="max-width:600px">
+      <li class="step-item">
+        <span class="step-num">01</span>
+        <div class="step-content"><strong>Discovery (60–90 min)</strong>Process map and top pain. Find exactly where time and data are lost.</div>
+      </li>
+      <li class="step-item">
+        <span class="step-num">02</span>
+        <div class="step-content"><strong>Short proposal</strong>Scope, milestones, and deliverables. No fine print.</div>
+      </li>
+      <li class="step-item">
+        <span class="step-num">03</span>
+        <div class="step-content"><strong>Milestone delivery</strong>Intermediate demo at each stage to validate before continuing.</div>
+      </li>
+      <li class="step-item">
+        <span class="step-num">04</span>
+        <div class="step-content"><strong>Wrap-up + docs</strong>Short manual so you can run without constant dependency.</div>
+      </li>
+    </ol>
+  </div>
+
+  <!-- AI CTA -->
+  <div class="ai-cta reveal" style="transition-delay:.2s">
+    <div class="ai-cta-inner">
+      <p class="ai-cta-eyebrow lang-es">¿Quieres aprender más sobre IA y automatización?</p>
+      <p class="ai-cta-eyebrow lang-en">Want to learn more about AI and automation?</p>
+      <h3 class="ai-cta-title lang-es">La principal herramienta es la creación de flujos</h3>
+      <h3 class="ai-cta-title lang-en">The core skill is flow design</h3>
+      <p class="ai-cta-body lang-es">
+        No necesitas un equipo técnico para empezar. Necesitas entender qué proceso te quita
+        más tiempo y cómo diseñar el flujo correcto para automatizarlo. Eso lo podemos ver juntos.
+      </p>
+      <p class="ai-cta-body lang-en">
+        You don't need a technical team to start. You need to understand which process wastes your
+        most time and how to design the right flow to automate it. We can explore that together.
+      </p>
+      <a class="btn btn-primary lang-es" href="contacto.html">Contáctame</a>
+      <a class="btn btn-primary lang-en" href="contacto.html">Get in touch</a>
+    </div>
+  </div>
+
+</section>
+
+<hr class="divider" />
+
+<!-- ══ SECCIÓN 2 — PROYECTOS ══════════════════════════════ -->
+<section id="proyectos" class="section" aria-label="Proyectos">
+
+  <p class="section-label lang-es">02 — Proyectos</p>
+  <p class="section-label lang-en">02 — Projects</p>
+
+  <h2 class="section-title lang-es">
+    Automatizaciones <span class="accent">en acción</span>
+  </h2>
+  <h2 class="section-title lang-en">
+    Automations <span class="accent">in action</span>
+  </h2>
+
+  <p class="section-intro lang-es">
+    Cada proyecto parte de un problema real. Los diagramas muestran exactamente qué hace cada sistema —
+    de dónde vienen los datos, cómo se procesan y dónde terminan.
+  </p>
+  <p class="section-intro lang-en">
+    Every project starts from a real problem. The diagrams show exactly what each system does —
+    where data comes from, how it's processed, and where it ends up.
+  </p>
+
+  <div class="callout callout-purple reveal" style="margin-bottom:2.5rem">
+    <p class="callout-title lang-es">⚡ Mi rol: la mente, no solo el código</p>
+    <p class="callout-title lang-en">⚡ My role: the mind, not just the code</p>
+    <p class="callout-body lang-es">
+      Identifico el cuello de botella, diseño el sistema completo (flujo, reglas de negocio,
+      confirmaciones humanas, manejo de errores) y superviso que el resultado sea el esperado.
+      Las herramientas y la IA construyen; yo dirijo.
+    </p>
+    <p class="callout-body lang-en">
+      I identify the bottleneck, design the complete system (flow, business rules, human confirmations,
+      error handling), and verify the outcome. Tools and AI build; I direct.
+    </p>
+  </div>
+
+  <div class="project-stack">
+
+    <!-- ── P1: Asistente Financiero ── -->
+    <article class="project-card reveal" id="financiero">
+      <div class="project-card-top">
+        <div>
+          <h3 class="project-card-title lang-es">Mi Asistente Financiero</h3>
+          <h3 class="project-card-title lang-en">Personal Finance Assistant</h3>
+          <p class="project-card-meta">Gemini · Google Sheets · Telegram · Node.js · Railway</p>
+        </div>
+        <span class="pill lang-es">En curso</span>
+        <span class="pill lang-en">In progress</span>
+      </div>
+      <div class="project-two-col">
+        <div class="project-copy">
+          <h4 class="lang-es">Problema</h4><h4 class="lang-en">Problem</h4>
+          <p class="lang-es">Registrar gastos a mano desde correos bancarios pierde el detalle entre <strong>flujo de caja real</strong> y <strong>deuda de tarjeta</strong>.</p>
+          <p class="lang-en">Manually logging expenses from bank emails blurs <strong>cash flow</strong> vs. <strong>credit-card debt</strong>.</p>
+          <h4 class="lang-es">Solución</h4><h4 class="lang-en">Solution</h4>
+          <p class="lang-es">Pipeline que lee correos, clasifica con IA (Gemini), escribe en pestañas dedicadas y usa <strong>Telegram para revisión humana</strong> cuando la confianza es baja. Reportes automáticos en la nube.</p>
+          <p class="lang-en">Pipeline that reads emails, classifies with AI (Gemini), writes to dedicated Sheets tabs, and uses <strong>Telegram for human review</strong> when confidence is low. Automated cloud reporting.</p>
+          <div class="tag-row">
+            <span class="tag tag-cyan">Email parsing</span>
+            <span class="tag tag-cyan">AI classification</span>
+            <span class="tag tag-cyan">HITL</span>
+            <span class="tag">Google Sheets</span>
+            <span class="tag">Node.js</span>
+          </div>
+        </div>
+        <div class="diagram-wrap">
+          <p class="diagram-caption lang-es">Flujo del sistema</p>
+          <p class="diagram-caption lang-en">System flow</p>
+          <svg class="flow-svg" viewBox="0 0 620 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="108" y1="68" x2="148" y2="68" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="246" y1="68" x2="278" y2="68" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="342" y1="68" x2="414" y2="68" stroke="rgba(34,197,94,.25)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="522" y1="68" x2="552" y2="68" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="310" y1="98" x2="310" y2="140" stroke="rgba(245,158,11,.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <line x1="310" y1="140" x2="416" y2="140" stroke="rgba(245,158,11,.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <line x1="416" y1="140" x2="416" y2="100" stroke="rgba(245,158,11,.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <rect x="10" y="42" width="98" height="52" rx="9" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="59" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#00d4ff">📧</text>
+            <text x="59" y="78" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Correo</text>
+            <text x="59" y="89" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">bancario</text>
+            <polygon points="148,64 158,68 148,72" fill="#00d4ff"/>
+            <rect x="158" y="42" width="88" height="52" rx="9" fill="rgba(168,85,247,.07)" stroke="#a855f7" stroke-width="1.5"/>
+            <text x="202" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#a855f7">🤖</text>
+            <text x="202" y="78" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">IA Gemini</text>
+            <text x="202" y="89" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">clasifica</text>
+            <polygon points="278,64 288,68 278,72" fill="#00d4ff"/>
+            <polygon points="310,42 344,68 310,94 276,68" fill="rgba(0,212,255,.04)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="310" y="64" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#00d4ff">¿Alta</text>
+            <text x="310" y="75" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#00d4ff">conf.?</text>
+            <text x="380" y="62" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#22c55e">SÍ</text>
+            <polygon points="414,64 424,68 414,72" fill="#22c55e"/>
+            <rect x="416" y="110" width="100" height="40" rx="9" fill="rgba(245,158,11,.08)" stroke="#f59e0b" stroke-width="1.2"/>
+            <text x="466" y="127" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600" fill="#f59e0b">💬 Telegram</text>
+            <text x="466" y="141" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">revisión humana</text>
+            <text x="356" y="148" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#f59e0b">NO →</text>
+            <rect x="424" y="42" width="98" height="52" rx="9" fill="rgba(34,197,94,.07)" stroke="#22c55e" stroke-width="1.5"/>
+            <text x="473" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#22c55e">📊</text>
+            <text x="473" y="78" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Google</text>
+            <text x="473" y="89" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Sheets</text>
+            <polygon points="552,64 562,68 552,72" fill="#00d4ff"/>
+            <rect x="562" y="42" width="50" height="52" rx="9" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="587" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#00d4ff">📈</text>
+            <text x="587" y="78" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">Cloud</text>
+            <text x="587" y="89" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">Report</text>
+            <circle r="3.5" fill="#00d4ff" opacity=".9"><animateMotion dur="4s" begin="0s" repeatCount="indefinite" path="M 108 68 L 158 68"/></circle>
+            <circle r="3.5" fill="#a855f7" opacity=".9"><animateMotion dur="4s" begin="1s" repeatCount="indefinite" path="M 246 68 L 278 68"/></circle>
+            <circle r="3.5" fill="#22c55e" opacity=".9"><animateMotion dur="4s" begin="2s" repeatCount="indefinite" path="M 342 68 L 424 68"/></circle>
+            <circle r="3" fill="#00d4ff" opacity=".85"><animateMotion dur="4s" begin="3s" repeatCount="indefinite" path="M 522 68 L 562 68"/></circle>
+          </svg>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── P2: Selvato Dashboard ── -->
+    <article class="project-card reveal" id="selvato" style="transition-delay:.08s">
+      <div class="project-card-top">
+        <div>
+          <h3 class="project-card-title">Selvato Dashboard</h3>
+          <p class="project-card-meta lang-es">Marca colombiana de apparel · Shopify · Next.js · Tailwind · Recharts</p>
+          <p class="project-card-meta lang-en">Colombian apparel brand · Shopify · Next.js · Tailwind · Recharts</p>
+        </div>
+        <span class="pill lang-es">En curso</span>
+        <span class="pill lang-en">In progress</span>
+      </div>
+      <div class="project-two-col">
+        <div class="project-copy">
+          <h4 class="lang-es">Qué es</h4><h4 class="lang-en">What it is</h4>
+          <p class="lang-es">Panel ejecutivo con KPIs de negocio claros: ventas, inventario editable, CRM, ads Meta, comportamiento GA4, chat asistente y alertas de stock.</p>
+          <p class="lang-en">Executive dashboard with plain-language KPIs: sales, editable inventory, CRM, Meta ads, GA4 behaviour, assistant chat, and stock alerts.</p>
+          <h4 class="lang-es">Arquitectura</h4><h4 class="lang-en">Architecture</h4>
+          <p class="lang-es">Patrón <strong>Adaptador</strong>: hoy <code>MockAdapter</code> en memoria; la misma interfaz enchufa Shopify, Meta y GA4 sin reescribir la UI.</p>
+          <p class="lang-en"><strong>Adapter</strong> pattern: today an in-memory <code>MockAdapter</code>; same interface plugs in Shopify, Meta, and GA4 without rewriting the UI.</p>
+          <div class="tag-row">
+            <span class="tag tag-cyan">Next.js</span>
+            <span class="tag tag-cyan">Recharts</span>
+            <span class="tag">Shopify</span>
+            <span class="tag">Meta Ads</span>
+            <span class="tag">GA4</span>
+          </div>
+        </div>
+        <div class="diagram-wrap">
+          <p class="diagram-caption lang-es">Arquitectura de datos</p>
+          <p class="diagram-caption lang-en">Data architecture</p>
+          <svg class="flow-svg" viewBox="0 0 620 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="10" y="20" width="82" height="34" rx="7" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.2"/>
+            <text x="51" y="41" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Shopify</text>
+            <rect x="10" y="60" width="82" height="34" rx="7" fill="rgba(168,85,247,.07)" stroke="#a855f7" stroke-width="1.2"/>
+            <text x="51" y="81" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Meta · GA4</text>
+            <line x1="92" y1="37" x2="168" y2="70" stroke="rgba(0,212,255,.2)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <line x1="92" y1="77" x2="168" y2="70" stroke="rgba(168,85,247,.2)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <polygon points="165,66 175,70 165,74" fill="#00d4ff"/>
+            <rect x="175" y="48" width="120" height="44" rx="9" fill="rgba(0,212,255,.06)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="235" y="67" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600" fill="#00d4ff">Data Adapter</text>
+            <text x="235" y="82" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#475569">Interface única</text>
+            <line x1="295" y1="70" x2="340" y2="70" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="337,66 347,70 337,74" fill="#a855f7"/>
+            <rect x="347" y="48" width="110" height="44" rx="9" fill="rgba(168,85,247,.07)" stroke="#a855f7" stroke-width="1.5"/>
+            <text x="402" y="67" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600" fill="#a855f7">Next.js UI</text>
+            <text x="402" y="82" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">Tailwind · Recharts</text>
+            <line x1="457" y1="70" x2="495" y2="70" stroke="rgba(34,197,94,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="492,66 502,70 492,74" fill="#22c55e"/>
+            <rect x="502" y="48" width="110" height="44" rx="9" fill="rgba(34,197,94,.07)" stroke="#22c55e" stroke-width="1.5"/>
+            <text x="557" y="67" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600" fill="#22c55e">Dashboard</text>
+            <text x="557" y="82" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">KPIs · Alertas</text>
+            <circle r="3" fill="#00d4ff" opacity=".9"><animateMotion dur="3.5s" begin="0s" repeatCount="indefinite" path="M 92 37 L 175 70"/></circle>
+            <circle r="3" fill="#a855f7" opacity=".9"><animateMotion dur="3.5s" begin=".8s" repeatCount="indefinite" path="M 295 70 L 347 70"/></circle>
+            <circle r="3" fill="#22c55e" opacity=".9"><animateMotion dur="3.5s" begin="1.6s" repeatCount="indefinite" path="M 457 70 L 502 70"/></circle>
+          </svg>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── P3: QPC Bot ── -->
+    <article class="project-card reveal" id="qpc" style="transition-delay:.16s">
+      <div class="project-card-top">
+        <div>
+          <h3 class="project-card-title">QPC — Club de Pádel</h3>
+          <p class="project-card-meta">Telegram · Python · Google Sheets · AI Agent</p>
+        </div>
+        <span class="pill pill-amber lang-es">Piloto</span>
+        <span class="pill pill-amber lang-en">Pilot</span>
+      </div>
+      <div class="project-two-col">
+        <div class="project-copy">
+          <p class="lang-es">Bot que registra ventas y reparte la cuenta entre jugadores con <strong>confirmación explícita</strong> antes de guardar. Agente IA + herramientas deterministas (precios, reglas de cancha).</p>
+          <p class="lang-en">Bot that logs sales and splits bills with <strong>explicit confirmation</strong> before saving. AI agent + deterministic tools (pricing, court rules).</p>
+          <div class="tag-row">
+            <span class="tag tag-cyan">Telegram bot</span>
+            <span class="tag tag-cyan">AI agent</span>
+            <span class="tag">Python</span>
+            <span class="tag">Google Sheets</span>
+          </div>
+        </div>
+        <div class="diagram-wrap">
+          <p class="diagram-caption lang-es">Flujo del bot</p>
+          <p class="diagram-caption lang-en">Bot flow</p>
+          <svg class="flow-svg" viewBox="0 0 560 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="10" y="28" width="100" height="44" rx="9" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="60" y="48" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#00d4ff">💬</text>
+            <text x="60" y="64" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Telegram</text>
+            <line x1="110" y1="50" x2="148" y2="50" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="145,46 155,50 145,54" fill="#00d4ff"/>
+            <rect x="155" y="28" width="140" height="44" rx="9" fill="rgba(168,85,247,.07)" stroke="#a855f7" stroke-width="1.5"/>
+            <text x="225" y="47" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600" fill="#a855f7">Agente IA + Tools</text>
+            <text x="225" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">precios · reglas cancha</text>
+            <line x1="295" y1="50" x2="333" y2="50" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="330,46 340,50 330,54" fill="#22c55e"/>
+            <rect x="340" y="28" width="110" height="44" rx="9" fill="rgba(34,197,94,.07)" stroke="#22c55e" stroke-width="1.5"/>
+            <text x="395" y="44" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600" fill="#22c55e">✅ Confirmación</text>
+            <text x="395" y="59" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">humana antes</text>
+            <line x1="450" y1="50" x2="488" y2="50" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="485,46 495,50 485,54" fill="#00d4ff"/>
+            <rect x="495" y="28" width="55" height="44" rx="9" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="522" y="47" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" fill="#22c55e">📊</text>
+            <text x="522" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">Sheets</text>
+            <circle r="3" fill="#00d4ff" opacity=".9"><animateMotion dur="3.5s" begin="0s" repeatCount="indefinite" path="M 110 50 L 155 50"/></circle>
+            <circle r="3" fill="#a855f7" opacity=".9"><animateMotion dur="3.5s" begin="1s" repeatCount="indefinite" path="M 295 50 L 340 50"/></circle>
+            <circle r="3" fill="#22c55e" opacity=".9"><animateMotion dur="3.5s" begin="2s" repeatCount="indefinite" path="M 450 50 L 495 50"/></circle>
+          </svg>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── P4: Asistente Personal Hermes ── -->
+    <article class="project-card reveal" id="hermes" style="transition-delay:.24s">
+      <div class="project-card-top">
+        <div>
+          <h3 class="project-card-title lang-es">Asistente Personal — Hermes</h3>
+          <h3 class="project-card-title lang-en">Personal Assistant — Hermes</h3>
+          <p class="project-card-meta">Hermes Agent · WhatsApp · Google Calendar · Google Sheets</p>
+        </div>
+        <span class="pill pill-muted lang-es">Experimental</span>
+        <span class="pill pill-muted lang-en">Experimental</span>
+      </div>
+      <div class="project-two-col">
+        <div class="project-copy">
+          <h4 class="lang-es">Qué hace</h4><h4 class="lang-en">What it does</h4>
+          <p class="lang-es">Agente conversacional que gestiona la agenda personal desde WhatsApp: crea y consulta eventos en Google Calendar, hace anotaciones en Google Sheets y envía recordatorios — todo por chat, sin abrir apps.</p>
+          <p class="lang-en">Conversational agent that manages a personal schedule from WhatsApp: creates and queries Google Calendar events, logs notes in Google Sheets, and sends reminders — all by chat, without opening apps.</p>
+          <h4 class="lang-es">Enfoque técnico</h4><h4 class="lang-en">Technical focus</h4>
+          <p class="lang-es">Arquitectura multiherramienta con <strong>Hermes Agent</strong>: el agente decide qué herramienta invocar según el mensaje. Proyecto de aprendizaje sobre orquestación de agentes y handoff entre herramientas.</p>
+          <p class="lang-en">Multi-tool architecture with <strong>Hermes Agent</strong>: the agent decides which tool to invoke based on the message. Learning project on agent orchestration and tool handoff.</p>
+          <div class="tag-row">
+            <span class="tag tag-cyan">Hermes Agent</span>
+            <span class="tag tag-cyan">Multi-tool</span>
+            <span class="tag">WhatsApp</span>
+            <span class="tag">Google Calendar</span>
+            <span class="tag">Google Sheets</span>
+          </div>
+        </div>
+        <div class="diagram-wrap">
+          <p class="diagram-caption lang-es">Flujo del agente</p>
+          <p class="diagram-caption lang-en">Agent flow</p>
+          <svg class="flow-svg" viewBox="0 0 580 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- WhatsApp -->
+            <rect x="10" y="38" width="100" height="44" rx="9" fill="rgba(34,197,94,.07)" stroke="#22c55e" stroke-width="1.5"/>
+            <text x="60" y="58" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#22c55e">💬</text>
+            <text x="60" y="73" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">WhatsApp</text>
+            <!-- Arrow -->
+            <line x1="110" y1="60" x2="148" y2="60" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="145,56 155,60 145,64" fill="#a855f7"/>
+            <!-- Hermes Agent -->
+            <rect x="155" y="38" width="140" height="44" rx="9" fill="rgba(168,85,247,.07)" stroke="#a855f7" stroke-width="1.5"/>
+            <text x="225" y="56" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600" fill="#a855f7">Hermes Agent</text>
+            <text x="225" y="71" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">orquesta herramientas</text>
+            <!-- Arrows to tools (branch up/down) -->
+            <line x1="295" y1="52" x2="340" y2="28" stroke="rgba(0,212,255,.2)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <line x1="295" y1="60" x2="340" y2="60" stroke="rgba(34,197,94,.25)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <line x1="295" y1="68" x2="340" y2="92" stroke="rgba(0,212,255,.2)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <!-- Tool: Calendar -->
+            <rect x="340" y="16" width="110" height="30" rx="7" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.2"/>
+            <text x="395" y="35" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#00d4ff">📅 G. Calendar</text>
+            <!-- Tool: Sheets -->
+            <rect x="340" y="45" width="110" height="30" rx="7" fill="rgba(34,197,94,.07)" stroke="#22c55e" stroke-width="1.2"/>
+            <text x="395" y="64" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#22c55e">📊 G. Sheets</text>
+            <!-- Tool: Reminder -->
+            <rect x="340" y="79" width="110" height="30" rx="7" fill="rgba(168,85,247,.07)" stroke="#a855f7" stroke-width="1.2"/>
+            <text x="395" y="98" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#a855f7">🔔 Recordatorio</text>
+            <!-- Merge arrow to response -->
+            <line x1="450" y1="31" x2="495" y2="60" stroke="rgba(0,212,255,.2)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <line x1="450" y1="60" x2="495" y2="60" stroke="rgba(0,212,255,.2)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <line x1="450" y1="94" x2="495" y2="60" stroke="rgba(0,212,255,.2)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <polygon points="492,56 502,60 492,64" fill="#00d4ff"/>
+            <!-- Response -->
+            <rect x="502" y="38" width="70" height="44" rx="9" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="537" y="58" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" fill="#00d4ff">✅</text>
+            <text x="537" y="73" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">Respuesta</text>
+            <!-- Traveling dots -->
+            <circle r="3" fill="#22c55e" opacity=".9"><animateMotion dur="3.5s" begin="0s" repeatCount="indefinite" path="M 110 60 L 155 60"/></circle>
+            <circle r="3" fill="#a855f7" opacity=".9"><animateMotion dur="3.5s" begin="1s" repeatCount="indefinite" path="M 295 52 L 340 28"/></circle>
+            <circle r="3" fill="#00d4ff" opacity=".9"><animateMotion dur="3.5s" begin="2s" repeatCount="indefinite" path="M 450 60 L 502 60"/></circle>
+          </svg>
+        </div>
+      </div>
+    </article>
+
+  </div><!-- /project-stack -->
+</section>
+
+<hr class="divider" />
+
+<!-- ══ SECCIÓN 3 — TRAYECTORIA ═══════════════════════════ -->
+<section id="trayectoria" class="section" aria-label="Trayectoria profesional">
+
+  <p class="section-label lang-es">03 — Trayectoria</p>
+  <p class="section-label lang-en">03 — Background</p>
+
+  <h2 class="section-title lang-es">
+    El <span class="accent">recorrido</span> profesional
+  </h2>
+  <h2 class="section-title lang-en">
+    Professional <span class="accent">background</span>
+  </h2>
+
+  <p class="section-intro lang-es">
+    Ingeniería industrial como base sólida en procesos, datos y operaciones — luego aplicada a
+    tecnología deportiva, administración pública y automatización para negocios.
+  </p>
+  <p class="section-intro lang-en">
+    Industrial engineering as a solid foundation in processes, data, and operations — then applied to
+    sports technology, public administration, and business automation.
+  </p>
+
+  <div class="two-col">
+    <!-- Timeline -->
+    <div class="reveal">
+      <div class="timeline lang-es">
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Analista Jr de Datos</h3>
+            <span class="job-dates">ene 2026 — actualidad</span>
+          </header>
+          <p class="job-org">ICFES · Remoto</p>
+          <ul class="job-list">
+            <li>Auditoría y gestión de bases de datos relacionales en Oracle SQL.</li>
+            <li>Reportes de microdatos para entes territoriales — identificación de beneficiarios.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Data Operations Analyst</h3>
+            <span class="job-dates">abr 2024 — actualidad</span>
+          </header>
+          <p class="job-org">Genius Sports · Remoto</p>
+          <ul class="job-list">
+            <li>Gestión de datos para IA en análisis deportivo — Premier League, Ligue 1.</li>
+            <li>Equipos multiculturales, estándares de calidad, entrega a clientes internacionales.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Contratista Administrador</h3>
+            <span class="job-dates">oct 2024 — actualidad</span>
+          </header>
+          <p class="job-org">Alcaldía de Armenia</p>
+          <ul class="job-list">
+            <li>Coordinación del Plan de Gestión del Talento — conocimiento e innovación.</li>
+            <li>Mecanismos transversales que mejoraron colaboración interdepartamental.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Gestor Empresarial</h3>
+            <span class="job-dates">jul 2022 — nov 2022</span>
+          </header>
+          <p class="job-org">Comfenalco Quindío</p>
+          <ul class="job-list">
+            <li>Relaciones estratégicas con más de 30 empresas locales para empleabilidad.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Administrador de Almacén</h3>
+            <span class="job-dates">ago 2021 — mar 2022</span>
+          </header>
+          <p class="job-org">Quindiaguas S.A.S · Armenia</p>
+          <ul class="job-list">
+            <li>Optimización de procesos, eliminación de cuellos de botella, control de inventarios.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Práctica Profesional</h3>
+            <span class="job-dates">ago 2021 — mar 2022</span>
+          </header>
+          <p class="job-org">Colombina S.A.S · Cali</p>
+          <ul class="job-list">
+            <li>Proyectos de optimización organizacional con equipos multidisciplinarios.</li>
+          </ul>
+        </article>
+      </div><!-- /timeline ES -->
+
+      <div class="timeline lang-en">
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Junior Data Analyst</h3>
+            <span class="job-dates">Jan 2026 — Present</span>
+          </header>
+          <p class="job-org">ICFES · Remote</p>
+          <ul class="job-list">
+            <li>Oracle SQL database auditing and management for national data integrity.</li>
+            <li>Microdata reports for regional entities — scholarship recipient identification.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Data Operations Analyst</h3>
+            <span class="job-dates">Apr 2024 — Present</span>
+          </header>
+          <p class="job-org">Genius Sports · Remote</p>
+          <ul class="job-list">
+            <li>Sports-AI data management — Premier League, Ligue 1 client delivery.</li>
+            <li>Multicultural remote teams, quality standards, international stakeholders.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Administrative Contractor</h3>
+            <span class="job-dates">Oct 2024 — Present</span>
+          </header>
+          <p class="job-org">Armenia City Hall</p>
+          <ul class="job-list">
+            <li>Talent Management Plan — knowledge management and innovation.</li>
+            <li>Cross-departmental communication improving institutional collaboration.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Business Development Manager</h3>
+            <span class="job-dates">Jul 2022 — Nov 2022</span>
+          </header>
+          <p class="job-org">Comfenalco Quindío</p>
+          <ul class="job-list">
+            <li>Strategic relationships with 30+ companies for employability pipeline.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Warehouse Manager</h3>
+            <span class="job-dates">Aug 2021 — Mar 2022</span>
+          </header>
+          <p class="job-org">Quindiaguas S.A.S · Armenia</p>
+          <ul class="job-list">
+            <li>Process optimization, bottleneck removal, and inventory control system.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <header class="job-head">
+            <h3 class="job-title">Professional Internship</h3>
+            <span class="job-dates">Aug 2021 — Mar 2022</span>
+          </header>
+          <p class="job-org">Colombina S.A.S · Cali</p>
+          <ul class="job-list">
+            <li>Organizational optimization with multidisciplinary teams.</li>
+          </ul>
+        </article>
+      </div><!-- /timeline EN -->
+    </div><!-- /left -->
+
+    <!-- Right: skills + edu + CV -->
+    <div style="display:flex;flex-direction:column;gap:1.25rem">
+      <div class="reveal" style="transition-delay:.1s">
+        <p style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin:0 0 .55rem;font-family:var(--mono)" class="lang-es">Competencias</p>
+        <p style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin:0 0 .55rem;font-family:var(--mono)" class="lang-en">Skills</p>
+        <div class="skill-grid lang-es">
+          <span class="skill-chip">SQL · Oracle</span>
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">Google Sheets</span>
+          <span class="skill-chip">Power BI</span>
+          <span class="skill-chip skill-chip-purple">Bots Telegram / WhatsApp</span>
+          <span class="skill-chip skill-chip-purple">Gemini · IA generativa</span>
+          <span class="skill-chip skill-chip-green">Diseño de flujos</span>
+          <span class="skill-chip skill-chip-green">Optimización de procesos</span>
+          <span class="skill-chip">Inglés B2</span>
+          <span class="skill-chip">Equipos remotos globales</span>
+        </div>
+        <div class="skill-grid lang-en">
+          <span class="skill-chip">SQL · Oracle</span>
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">Google Sheets</span>
+          <span class="skill-chip">Power BI</span>
+          <span class="skill-chip skill-chip-purple">Telegram / WhatsApp bots</span>
+          <span class="skill-chip skill-chip-purple">Gemini · Generative AI</span>
+          <span class="skill-chip skill-chip-green">Flow design</span>
+          <span class="skill-chip skill-chip-green">Process optimization</span>
+          <span class="skill-chip">English B2</span>
+          <span class="skill-chip">Remote global teams</span>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:.18s">
+        <div class="info-block">
+          <p class="info-block-title lang-es">Formación</p>
+          <p class="info-block-title lang-en">Education</p>
+          <ul>
+            <li><strong class="lang-es">Especialización en Análisis de Datos</strong><strong class="lang-en">Data Analytics Specialization</strong> — UNIR (2024–2025)</li>
+            <li><strong class="lang-es">Ingeniería Industrial</strong><strong class="lang-en">Industrial Engineering</strong> — Javeriana Cali (2015–2020)</li>
+            <li><strong class="lang-es">Inglés B2</strong><strong class="lang-en">English B2</strong> — Sydney, Australia (2022–2024)</li>
+            <li>Yellow Six Sigma · SQL avanzado · Python datos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reveal" style="transition-delay:.25s">
+        <div class="cv-actions">
+          <a class="btn btn-ghost btn-sm" href="cv/Federico-Arango-CV-ES.pdf" download>↓ CV · Español</a>
+          <a class="btn btn-ghost btn-sm" href="cv/Federico-Arango-CV-EN.pdf" download>↓ Résumé · English</a>
+        </div>
+      </div>
+    </div>
+  </div><!-- /two-col -->
+
+</section>
+
+</main>
+
+<footer class="footer">
+  <p class="lang-es">© <span id="y"></span> Federico Arango Aristizábal · <a href="#servicios">Lo que hago</a> · <a href="#proyectos">Proyectos</a> · <a href="contacto.html">Contacto</a></p>
+  <p class="lang-en">© <span id="y-en"></span> Federico Arango Aristizábal · <a href="#servicios">What I do</a> · <a href="#proyectos">Projects</a> · <a href="contacto.html">Contact</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

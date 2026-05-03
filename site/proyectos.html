@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Proyectos de Federico Arango: asistente financiero, Selvato Dashboard, QPC y más — diagramas y detalle técnico." />
+  <title>Federico Arango · Proyectos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .hero-title { font-family: 'Audiowide', var(--font); }
+    .section-label { font-family: var(--mono); }
+  </style>
+</head>
+<body class="lang-es">
+
+<header class="top">
+  <a class="logo" href="index.html" aria-label="Inicio">FA</a>
+  <nav class="nav" aria-label="Principal">
+    <a href="index.html#carrera"        class="nav-link lang-es">Trayectoria</a>
+    <a href="index.html#carrera"        class="nav-link lang-en">Career</a>
+    <a href="proyectos.html"            class="nav-link is-active lang-es">Proyectos</a>
+    <a href="proyectos.html"            class="nav-link is-active lang-en">Projects</a>
+    <a href="index.html#negocio"        class="nav-link lang-es">Tu negocio</a>
+    <a href="index.html#negocio"        class="nav-link lang-en">Your business</a>
+    <a href="contacto.html"             class="nav-link lang-es">Contacto</a>
+    <a href="contacto.html"             class="nav-link lang-en">Contact</a>
+  </nav>
+  <div class="lang-switch" role="group" aria-label="Idioma">
+    <button type="button" class="lang-btn is-active" data-lang="es">ES</button>
+    <button type="button" class="lang-btn" data-lang="en">EN</button>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:2rem">
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+    <p class="hero-badge lang-es">Portafolio técnico — vista detallada</p>
+    <p class="hero-badge lang-en">Technical portfolio — deep dive</p>
+    <h1 class="hero-title lang-es">Proyectos</h1>
+    <h1 class="hero-title lang-en">Projects</h1>
+    <p class="hero-lead lang-es">
+      Dos líneas principales — <strong>automatización financiera</strong> y
+      <strong>dashboard ecommerce Selvato</strong> — más pilotos complementarios.
+      Diagramas animados muestran el flujo exacto de cada sistema.
+    </p>
+    <p class="hero-lead lang-en">
+      Two primary tracks — <strong>personal finance automation</strong> and the
+      <strong>Selvato ecommerce dashboard</strong> — plus complementary pilots.
+      Animated diagrams show the exact flow of each system.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-ghost lang-es" href="index.html">← Inicio</a>
+      <a class="btn btn-ghost lang-en" href="index.html">← Home</a>
+      <a class="btn btn-primary" href="contacto.html">Contact</a>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── Proyecto 1: Asistente Financiero ── -->
+  <section class="section reveal" id="financiero">
+    <p class="section-label lang-es">Proyecto 01</p>
+    <p class="section-label lang-en">Project 01</p>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:1rem">
+      <div>
+        <h2 class="section-title lang-es" style="margin-bottom:.2rem">Mi Asistente Financiero</h2>
+        <h2 class="section-title lang-en" style="margin-bottom:.2rem">Personal Finance Assistant</h2>
+        <p style="margin:0;font-size:.82rem;color:var(--text-2);font-family:var(--mono)">
+          Gemini · Google Sheets · Telegram · Node.js · Railway
+        </p>
+      </div>
+      <span class="pill lang-es">En curso</span>
+      <span class="pill lang-en">In progress</span>
+    </div>
+
+    <div class="project-two-col">
+      <div class="project-copy">
+        <h4 class="lang-es">Problema</h4>
+        <h4 class="lang-en">Problem</h4>
+        <p class="lang-es">
+          Registrar gastos y créditos a mano desde correos bancarios consume tiempo y pierde el detalle
+          entre <strong>flujo de caja real</strong> y <strong>deuda de tarjeta</strong>.
+          Los datos críticos quedan en el inbox, no en un sistema.
+        </p>
+        <p class="lang-en">
+          Manually logging expenses from bank emails is slow and blurs
+          <strong>real cash flow</strong> vs. <strong>credit-card debt</strong>.
+          Critical data stays in the inbox, not in a system.
+        </p>
+
+        <h4 class="lang-es">Solución diseñada</h4>
+        <h4 class="lang-en">Designed solution</h4>
+        <p class="lang-es">
+          Pipeline que lee correos automáticamente, clasifica cada transacción con IA (Gemini) en
+          pestañas dedicadas: transacciones, transferencias, inversiones. Cuando la confianza del modelo
+          es baja, envía un mensaje a <strong>Telegram para confirmación humana</strong> antes de guardar.
+          Reportes recurrentes corren en la nube (Railway).
+        </p>
+        <p class="lang-en">
+          A pipeline reads emails automatically, classifies each transaction with AI (Gemini) into
+          dedicated tabs: transactions, transfers, investments. When model confidence is low, it sends
+          a <strong>Telegram message for human confirmation</strong> before saving.
+          Recurring reports run in the cloud (Railway).
+        </p>
+
+        <h4 class="lang-es">Resultado</h4>
+        <h4 class="lang-en">Result</h4>
+        <p class="lang-es">
+          Cero entrada manual de gastos. Separación limpia de flujo de caja vs. deuda. Revisión humana
+          donde el dato es delicado — no deja que la IA decida sola sobre registros fiscales.
+        </p>
+        <p class="lang-en">
+          Zero manual expense entry. Clean separation of cash flow vs. debt. Human review where data
+          is sensitive — AI doesn't decide alone on fiscal records.
+        </p>
+
+        <div class="tag-row">
+          <span class="tag tag-cyan">Email parsing</span>
+          <span class="tag tag-cyan">AI classification</span>
+          <span class="tag tag-cyan">HITL</span>
+          <span class="tag">Google Sheets</span>
+          <span class="tag">Telegram</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Railway</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="diagram-wrap">
+          <p class="diagram-caption lang-es">Flujo completo del sistema</p>
+          <p class="diagram-caption lang-en">Complete system flow</p>
+          <svg class="flow-svg" viewBox="0 0 620 210" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <filter id="glow2">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <!-- Connectors -->
+            <line x1="108" y1="68" x2="148" y2="68" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="246" y1="68" x2="278" y2="68" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="342" y1="68" x2="414" y2="68" stroke="rgba(34,197,94,.25)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="522" y1="68" x2="552" y2="68" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <!-- NO branch -->
+            <line x1="310" y1="98" x2="310" y2="140" stroke="rgba(245,158,11,.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <line x1="310" y1="140" x2="416" y2="140" stroke="rgba(245,158,11,.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <line x1="416" y1="140" x2="416" y2="100" stroke="rgba(245,158,11,.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+            <!-- Nodes -->
+            <rect x="10" y="42" width="98" height="52" rx="9" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5" filter="url(#glow2)"/>
+            <text x="59" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#00d4ff">📧</text>
+            <text x="59" y="78" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Correo</text>
+            <text x="59" y="89" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">bancario</text>
+
+            <polygon points="148,64 158,68 148,72" fill="#00d4ff"/>
+
+            <rect x="158" y="42" width="88" height="52" rx="9" fill="rgba(168,85,247,.07)" stroke="#a855f7" stroke-width="1.5"/>
+            <text x="202" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#a855f7">🤖</text>
+            <text x="202" y="78" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">IA Gemini</text>
+            <text x="202" y="89" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">clasifica</text>
+
+            <polygon points="278,64 288,68 278,72" fill="#00d4ff"/>
+
+            <!-- Diamond decision -->
+            <polygon points="310,42 344,68 310,94 276,68" fill="rgba(0,212,255,.04)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="310" y="64" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#00d4ff">¿Alta</text>
+            <text x="310" y="75" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#00d4ff">confianza?</text>
+
+            <text x="380" y="62" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#22c55e">SÍ</text>
+            <polygon points="414,64 424,68 414,72" fill="#22c55e"/>
+
+            <!-- Telegram (NO branch) -->
+            <rect x="416" y="110" width="100" height="40" rx="9" fill="rgba(245,158,11,.08)" stroke="#f59e0b" stroke-width="1.2"/>
+            <text x="466" y="127" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600" fill="#f59e0b">💬 Telegram</text>
+            <text x="466" y="141" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">revisión humana</text>
+            <text x="356" y="148" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#f59e0b">NO →</text>
+
+            <!-- Sheets -->
+            <rect x="424" y="42" width="98" height="52" rx="9" fill="rgba(34,197,94,.07)" stroke="#22c55e" stroke-width="1.5"/>
+            <text x="473" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#22c55e">📊</text>
+            <text x="473" y="78" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Google</text>
+            <text x="473" y="89" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Sheets</text>
+
+            <polygon points="552,64 562,68 552,72" fill="#00d4ff"/>
+
+            <!-- Reportes -->
+            <rect x="562" y="42" width="50" height="52" rx="9" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="587" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#00d4ff">📈</text>
+            <text x="587" y="78" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">Cloud</text>
+            <text x="587" y="89" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">Report</text>
+
+            <!-- Dots -->
+            <circle r="3.5" fill="#00d4ff" opacity=".9">
+              <animateMotion dur="4s" begin="0s" repeatCount="indefinite" path="M 108 68 L 158 68"/>
+            </circle>
+            <circle r="3.5" fill="#a855f7" opacity=".9">
+              <animateMotion dur="4s" begin="1s" repeatCount="indefinite" path="M 246 68 L 278 68"/>
+            </circle>
+            <circle r="3.5" fill="#22c55e" opacity=".9">
+              <animateMotion dur="4s" begin="2s" repeatCount="indefinite" path="M 342 68 L 424 68"/>
+            </circle>
+            <circle r="3" fill="#00d4ff" opacity=".85">
+              <animateMotion dur="4s" begin="3s" repeatCount="indefinite" path="M 522 68 L 562 68"/>
+            </circle>
+          </svg>
+        </div>
+
+        <!-- Screenshot placeholder -->
+        <figure style="margin-top:1rem;border-radius:var(--radius);overflow:hidden;border:1px dashed var(--border);background:rgba(0,212,255,.03)">
+          <img src="img/financiero.png" alt="" class="project-photo" data-ph="ph-fin" style="display:block;width:100%;height:auto" loading="lazy"/>
+          <figcaption id="ph-fin" class="media-placeholder" hidden style="padding:2rem 1.25rem;text-align:center;color:var(--text-2)">
+            <p class="lang-es"><strong style="color:var(--text)">Captura pendiente.</strong> Guarda <code>site/img/financiero.png</code></p>
+            <p class="lang-en"><strong style="color:var(--text)">Screenshot pending.</strong> Save as <code>site/img/financiero.png</code></p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── Proyecto 2: Selvato ── -->
+  <section class="section reveal" id="selvato">
+    <p class="section-label lang-es">Proyecto 02</p>
+    <p class="section-label lang-en">Project 02</p>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:1rem">
+      <div>
+        <h2 class="section-title" style="margin-bottom:.2rem">Selvato Dashboard</h2>
+        <p style="margin:0;font-size:.82rem;color:var(--text-2);font-family:var(--mono)">
+          Shopify · Next.js · Tailwind · Recharts · MockAdapter
+        </p>
+      </div>
+      <span class="pill lang-es">En curso</span>
+      <span class="pill lang-en">In progress</span>
+    </div>
+
+    <div class="project-two-col">
+      <div class="project-copy">
+        <h4 class="lang-es">Qué es</h4>
+        <h4 class="lang-en">What it is</h4>
+        <p class="lang-es">
+          Panel ejecutivo para una marca colombiana de apparel en Shopify. Concentra KPIs de negocio
+          en un solo lugar: inicio con métricas clave, ventas filtrables, inventario editable (demo),
+          CRM, comportamiento web (GA4), publicidad Meta, chat asistente, calendario y alertas de stock.
+        </p>
+        <p class="lang-en">
+          Executive dashboard for a Colombian apparel brand on Shopify. Consolidates business KPIs in
+          one place: a home with key metrics, filtered sales, editable inventory (demo), CRM,
+          web behaviour (GA4), Meta advertising, assistant chat, calendar, and stock alerts.
+        </p>
+
+        <h4 class="lang-es">Arquitectura de datos</h4>
+        <h4 class="lang-en">Data architecture</h4>
+        <p class="lang-es">
+          Patrón <strong>Adaptador</strong>: hoy corre con <code>MockAdapter</code> en memoria.
+          La misma interfaz permite enchufar Shopify, Meta y GA4 sin reescribir la UI —
+          el dato cambia de fuente, la pantalla sigue igual.
+        </p>
+        <p class="lang-en">
+          <strong>Adapter</strong> pattern: currently runs with an in-memory <code>MockAdapter</code>.
+          The same interface plugs in Shopify, Meta, and GA4 without rewriting the UI —
+          the data source changes, the screen stays the same.
+        </p>
+
+        <div class="tag-row">
+          <span class="tag tag-cyan">Next.js</span>
+          <span class="tag tag-cyan">Recharts</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Shopify</span>
+          <span class="tag">Meta Ads</span>
+          <span class="tag">GA4</span>
+          <span class="tag">TypeScript</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="diagram-wrap">
+          <p class="diagram-caption lang-es">Arquitectura de capas</p>
+          <p class="diagram-caption lang-en">Layer architecture</p>
+          <svg class="flow-svg" viewBox="0 0 620 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Sources -->
+            <rect x="10" y="20" width="82" height="34" rx="7" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.2"/>
+            <text x="51" y="41" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Shopify</text>
+
+            <rect x="10" y="60" width="82" height="34" rx="7" fill="rgba(168,85,247,.07)" stroke="#a855f7" stroke-width="1.2"/>
+            <text x="51" y="81" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Meta Ads</text>
+
+            <rect x="10" y="100" width="82" height="34" rx="7" fill="rgba(34,197,94,.07)" stroke="#22c55e" stroke-width="1.2"/>
+            <text x="51" y="121" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">GA4</text>
+
+            <!-- Connectors to adapter -->
+            <line x1="92" y1="37" x2="168" y2="70" stroke="rgba(0,212,255,.2)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <line x1="92" y1="77" x2="168" y2="70" stroke="rgba(168,85,247,.2)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <line x1="92" y1="117" x2="168" y2="70" stroke="rgba(34,197,94,.2)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <polygon points="165,66 175,70 165,74" fill="#00d4ff"/>
+
+            <!-- Adapter -->
+            <rect x="175" y="48" width="120" height="44" rx="9" fill="rgba(0,212,255,.06)" stroke="#00d4ff" stroke-width="1.5"/>
+            <text x="235" y="67" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600" fill="#00d4ff">Data Adapter</text>
+            <text x="235" y="82" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#475569">Interface única</text>
+
+            <!-- Arrow -->
+            <line x1="295" y1="70" x2="340" y2="70" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="337,66 347,70 337,74" fill="#a855f7"/>
+
+            <!-- Next.js -->
+            <rect x="347" y="48" width="110" height="44" rx="9" fill="rgba(168,85,247,.07)" stroke="#a855f7" stroke-width="1.5"/>
+            <text x="402" y="67" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600" fill="#a855f7">Next.js UI</text>
+            <text x="402" y="82" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">Tailwind · Recharts</text>
+
+            <!-- Arrow -->
+            <line x1="457" y1="70" x2="495" y2="70" stroke="rgba(34,197,94,.3)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <polygon points="492,66 502,70 492,74" fill="#22c55e"/>
+
+            <!-- Dashboard output -->
+            <rect x="502" y="48" width="110" height="44" rx="9" fill="rgba(34,197,94,.07)" stroke="#22c55e" stroke-width="1.5"/>
+            <text x="557" y="67" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600" fill="#22c55e">Dashboard</text>
+            <text x="557" y="82" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">KPIs · Alertas</text>
+
+            <!-- Dots -->
+            <circle r="3" fill="#00d4ff" opacity=".9">
+              <animateMotion dur="3.5s" begin="0s" repeatCount="indefinite" path="M 92 37 L 175 70"/>
+            </circle>
+            <circle r="3" fill="#a855f7" opacity=".9">
+              <animateMotion dur="3.5s" begin=".8s" repeatCount="indefinite" path="M 295 70 L 347 70"/>
+            </circle>
+            <circle r="3" fill="#22c55e" opacity=".9">
+              <animateMotion dur="3.5s" begin="1.6s" repeatCount="indefinite" path="M 457 70 L 502 70"/>
+            </circle>
+          </svg>
+        </div>
+
+        <figure style="margin-top:1rem;border-radius:var(--radius);overflow:hidden;border:1px dashed var(--border);background:rgba(0,212,255,.03)">
+          <img src="img/selvato.png" alt="" class="project-photo" data-ph="ph-sel" style="display:block;width:100%;height:auto" loading="lazy"/>
+          <figcaption id="ph-sel" class="media-placeholder" hidden style="padding:2rem 1.25rem;text-align:center;color:var(--text-2)">
+            <p class="lang-es"><strong style="color:var(--text)">Captura pendiente.</strong> Exporta como <code>site/img/selvato.png</code></p>
+            <p class="lang-en"><strong style="color:var(--text)">Screenshot pending.</strong> Export as <code>site/img/selvato.png</code></p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── Proyecto 3: QPC ── -->
+  <section class="section reveal" id="qpc">
+    <p class="section-label lang-es">Proyecto 03 — Piloto</p>
+    <p class="section-label lang-en">Project 03 — Pilot</p>
+
+    <h2 class="section-title" style="margin-bottom:.75rem">QPC — Club de Pádel</h2>
+    <p style="margin:0 0 1.5rem;font-size:.82rem;color:var(--text-2);font-family:var(--mono)">
+      Telegram · Python · Google Sheets · AI Agent
+    </p>
+
+    <div class="project-two-col">
+      <div class="project-copy">
+        <p class="lang-es">
+          Bot que registra ventas y reparte la cuenta entre jugadores con
+          <strong>confirmación explícita</strong> antes de persistir cualquier dato.
+          Respaldo contable en Google Sheets.
+        </p>
+        <p class="lang-en">
+          Bot that logs sales and splits bills across players with
+          <strong>explicit confirmation</strong> before persisting any data.
+          Operational accounting backed by Google Sheets.
+        </p>
+        <p class="lang-es">
+          Arquitectura: capa de <strong>agente IA</strong> para lenguaje natural +
+          <strong>herramientas deterministas</strong> (precios fijos, reglas de cancha)
+          para que el agente no improvise en datos críticos.
+        </p>
+        <p class="lang-en">
+          Architecture: <strong>AI agent</strong> layer for natural language +
+          <strong>deterministic tools</strong> (fixed pricing, court rules)
+          so the agent doesn't improvise on critical data.
+        </p>
+        <div class="tag-row">
+          <span class="tag tag-cyan">Telegram bot</span>
+          <span class="tag tag-cyan">AI agent</span>
+          <span class="tag">Python</span>
+          <span class="tag">Google Sheets</span>
+          <span class="tag">HITL</span>
+        </div>
+      </div>
+
+      <div class="diagram-wrap" style="align-self:start">
+        <p class="diagram-caption lang-es">Flujo del bot</p>
+        <p class="diagram-caption lang-en">Bot flow</p>
+        <svg class="flow-svg" viewBox="0 0 560 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="10" y="28" width="100" height="44" rx="9" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5"/>
+          <text x="60" y="48" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="13" fill="#00d4ff">💬</text>
+          <text x="60" y="64" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" fill="#94a3b8">Telegram</text>
+
+          <line x1="110" y1="50" x2="148" y2="50" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <polygon points="145,46 155,50 145,54" fill="#00d4ff"/>
+
+          <rect x="155" y="28" width="140" height="44" rx="9" fill="rgba(168,85,247,.07)" stroke="#a855f7" stroke-width="1.5"/>
+          <text x="225" y="47" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600" fill="#a855f7">Agente IA + Tools</text>
+          <text x="225" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">precios · reglas cancha</text>
+
+          <line x1="295" y1="50" x2="333" y2="50" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <polygon points="330,46 340,50 330,54" fill="#22c55e"/>
+
+          <rect x="340" y="28" width="110" height="44" rx="9" fill="rgba(34,197,94,.07)" stroke="#22c55e" stroke-width="1.5"/>
+          <text x="395" y="44" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600" fill="#22c55e">✅ Confirmación</text>
+          <text x="395" y="59" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">humana antes</text>
+
+          <line x1="450" y1="50" x2="488" y2="50" stroke="rgba(0,212,255,.2)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <polygon points="485,46 495,50 485,54" fill="#00d4ff"/>
+
+          <rect x="495" y="28" width="55" height="44" rx="9" fill="rgba(0,212,255,.07)" stroke="#00d4ff" stroke-width="1.5"/>
+          <text x="522" y="47" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" fill="#22c55e">📊</text>
+          <text x="522" y="62" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="9" fill="#94a3b8">Sheets</text>
+
+          <circle r="3" fill="#00d4ff" opacity=".9">
+            <animateMotion dur="3.5s" begin="0s" repeatCount="indefinite" path="M 110 50 L 155 50"/>
+          </circle>
+          <circle r="3" fill="#a855f7" opacity=".9">
+            <animateMotion dur="3.5s" begin="1s" repeatCount="indefinite" path="M 295 50 L 340 50"/>
+          </circle>
+          <circle r="3" fill="#22c55e" opacity=".9">
+            <animateMotion dur="3.5s" begin="2s" repeatCount="indefinite" path="M 450 50 L 495 50"/>
+          </circle>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── Proyecto 4: Asistente personal ── -->
+  <section class="section reveal" id="personal" style="padding-bottom:3rem">
+    <p class="section-label lang-es">Proyecto 04 — Experimental</p>
+    <p class="section-label lang-en">Project 04 — Experimental</p>
+
+    <h2 class="section-title lang-es" style="margin-bottom:.75rem">Asistente personal</h2>
+    <h2 class="section-title lang-en" style="margin-bottom:.75rem">Personal assistant</h2>
+    <p style="margin:0 0 1.25rem;font-size:.82rem;color:var(--text-2);font-family:var(--mono)">
+      Hermes Agent · WhatsApp · Google Calendar · Sheets
+    </p>
+
+    <p class="lang-es" style="color:var(--text-2);max-width:60ch;line-height:1.7">
+      Prototipo conversacional para agenda (Google Calendar), lectura/escritura en Sheets y
+      recordatorios vía WhatsApp. Proyecto de aprendizaje sobre arquitecturas de agentes multiherramienta;
+      no es el núcleo comercial del portafolio.
+    </p>
+    <p class="lang-en" style="color:var(--text-2);max-width:60ch;line-height:1.7">
+      Conversational prototype for scheduling (Google Calendar), light Sheets read/write, and
+      WhatsApp reminders. Learning project on multi-tool agent architectures;
+      not the commercial core of the portfolio.
+    </p>
+
+    <div class="tag-row" style="margin-top:1rem">
+      <span class="tag">WhatsApp</span>
+      <span class="tag">Hermes Agent</span>
+      <span class="tag">Google Calendar</span>
+      <span class="tag">Google Sheets</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="lang-es">© <span id="y"></span> Federico Arango · <a href="index.html">Inicio</a> · <a href="contacto.html">Contacto</a></p>
+  <p class="lang-en">© <span id="y-en"></span> Federico Arango · <a href="index.html">Home</a> · <a href="contacto.html">Contact</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

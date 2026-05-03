@@ -1,0 +1,10 @@
+<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <polygon points="22,2 40,12 40,32 22,42 4,32 4,12" fill="#030b18" stroke="url(#g)" stroke-width="2"/>
+  <text x="22" y="29" text-anchor="middle" font-family="monospace" font-size="15" font-weight="700" fill="#00d4ff">FA</text>
+</svg>
